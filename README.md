@@ -12,7 +12,7 @@ For support using MTV-LMM, please email: liashenhav@gmail.com
 Software Requirements and dependencies
 -----------------------
 
-MTV-LMM is written R. In addition to R 3.4.0 (and higher), it has the following dependencies:
+MTV-LMM is written in R. In addition to R 3.4.0 (and higher), it has the following dependencies:
 
 - "dplyr", "vegan" (R packages)
 
@@ -37,7 +37,7 @@ metadata -  The first row contains the headers ('sample_id', 'ind_id', 'Id_num',
 Output format
 -----------------------
 
-The output is a matrix of taxa and their temporal effects. Taxa is considered to be 'autorehgressive' if the Time_explainability component is significant (p_value_adjusted <= 0.05). Only qc taxa are presented (i.e., taxa that are present in at least 10% of the temporal samples).   
+The output is a matrix of taxa and their temporal effects. Taxa is considered to be 'autoregressive' if the Time_explainability component is significant (p_value_adjusted <= 0.05). Only qc taxa are presented (i.e., taxa that are present in at least 10% of the temporal samples).   
 
 | VALUE  |DESCRIPTION |
 | ------------- | ------------- |
@@ -45,10 +45,10 @@ The output is a matrix of taxa and their temporal effects. Taxa is considered to
 | SD_Time_explainability   | standard deviation of the time_explainability  |
 | Ind_effect   | estimate of variance explained by the host at previous time points |
 | SD_ind_effect   | standard deviation of the host effect |
-| logL0   | log-likelihood under the null hypothesis: no termpral effect |
+| logL0   | log-likelihood under the null hypothesis: no temporal effect |
 | logL   | log-likelihood under the alternative |
 | taxa_index   | index of the focal taxa in the count table|
-| p_value_adjusted   | FDR adjusted p-value of the log-ratio test (null hypothesis: no termpral effect)|
+| p_value_adjusted   | FDR adjusted p-value of the log-ratio test (null hypothesis: no temporal effect)|
 
 
 
